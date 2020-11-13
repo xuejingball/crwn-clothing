@@ -1,6 +1,6 @@
 const INITIAL_DATA = {
-    collections: [
-        {
+    collections: {
+        hats: {
             id: 1,
             title: 'Hats',
             routeName: 'hats',
@@ -61,7 +61,7 @@ const INITIAL_DATA = {
                 }
             ]
         },
-        {
+        sneakers: {
             id: 2,
             title: 'Sneakers',
             routeName: 'sneakers',
@@ -116,7 +116,7 @@ const INITIAL_DATA = {
                 }
             ]
         },
-        {
+        jackets: {
             id: 3,
             title: 'Jackets',
             routeName: 'jackets',
@@ -153,7 +153,7 @@ const INITIAL_DATA = {
                 }
             ]
         },
-        {
+        womens: {
             id: 4,
             title: 'Womens',
             routeName: 'womens',
@@ -202,7 +202,7 @@ const INITIAL_DATA = {
                 }
             ]
         },
-        {
+        mens: {
             id: 5,
             title: 'Mens',
             routeName: 'mens',
@@ -245,7 +245,7 @@ const INITIAL_DATA = {
                 }
             ]
         }
-    ]
+    }
 }
 
 const shopReducer = (state = INITIAL_DATA, action) => {
