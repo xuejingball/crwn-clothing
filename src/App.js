@@ -34,6 +34,8 @@ class App extends React.Component {
       } else {
         setCurrentUser(userAuth);
       }
+      // to add shop collections to firebase
+      // addCollectionAndDocuments('collections', collectionsArray.map(({title, items}) => ({title, items})));
     });
   }
 
