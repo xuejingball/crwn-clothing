@@ -74,6 +74,9 @@ export const firestore = firebase.firestore();
 
 export const getCurrentUser = () => {
     return new Promise((resolve, reject) => {
+        // auth.onAuthStateChanged returns firebase.Unsubscribe.
+        // Here we call onAuthStateChanged once even the state is not changing
+        // to get back an userAuth, then immediately unsubscribe
         const unsubscribe = auth.onAuthStateChanged(userAuth => {
             unsubscribe();
             resolve(userAuth);
